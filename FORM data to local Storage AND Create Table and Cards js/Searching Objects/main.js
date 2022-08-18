@@ -243,6 +243,7 @@ function search() {
 function searchnation(){
   showNationality();
   showNationalityCard();
+  toggleCheck();
 }
 function dynamicDropdownList() {
   var dropdownHTML = document.getElementById('dropdown');
@@ -255,7 +256,7 @@ function dynamicDropdownList() {
   if (x == "Nationality") {
     document.getElementById('mySearch').style.display = "none";
 
-    dropdownHTML += '<option value=""class ="Filter_nationality" >-- Select  Nationality --</option>'
+    dropdownHTML += '<option value=""class ="Filter_data" >-- Select  Nationality --</option>'
 
 
     // var data = userdata.filter(userdata => {
@@ -278,7 +279,7 @@ function dynamicDropdownList() {
       var name2 = userdata[i].Nationality;
       if (_name2 != name2) {
         // console.log(name2)
-        dropdownHTML += '<option  class ="Filter_nationality" value="' + name2 + '"' + '">' + name2 + '</option>';
+        dropdownHTML += '<option  class ="Filter_data" value="' + name2 + '"' + '">' + name2 + '</option>';
       }
       _name2 = name2;
     }
@@ -288,28 +289,18 @@ function dynamicDropdownList() {
 
   }
   else {
-    document.getElementById('mySearch').style.display = "block  ";
+    document.getElementById('mySearch').style.display = "block";
   };
 
 
   if (x != "Nationality") {
     document.getElementById('dropdown').style.display = "none";
-  }
-  else {
-    document.getElementById('dropdown').style.display = "block";
-
-  }
-  if (x != "Nationality") {
     document.getElementById('buttonnation').style.display = "none";
-  }
-  else {
-    document.getElementById('buttonnation').style.display = "block";
-
-  }
-  if (x != "Nationality") {
     document.getElementById('button').style.display = "block";
   }
   else {
+    document.getElementById('dropdown').style.display = "block";
+    document.getElementById('buttonnation').style.display = "block";
     document.getElementById('button').style.display = "none";
 
   }
@@ -333,7 +324,7 @@ function showNationality() {
         <th>NAME</th>
         <th>AGE </th>
         <th>GENDER </th>
-        <th>NATIONAL </th>
+        <th>NATIONALITY </th>
       </tr>`
 
 
@@ -352,7 +343,7 @@ function showNationality() {
       <td>${userdata[i].Age}</td>
       <td >${userdata[i].Gender}</td>
       <td>  ${userdata[i].Nationality}</td>
-      <td>  <${userdata[i].Nationality} ></td>
+  
      
     </tr>`
 
@@ -449,7 +440,7 @@ function show() {
         <th>NAME</th>
         <th>AGE </th>
         <th>GENDER </th>
-        <th>NATIONAL </th>
+        <th>NATIONALITY </th>
       
       </tr>`
 
