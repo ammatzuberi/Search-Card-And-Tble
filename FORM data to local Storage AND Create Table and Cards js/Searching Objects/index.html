@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Searching Objects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="new">
+    <a href="form.html"><button class="formbutton"> Click Me to Create Form </button></a>
+
+    
+  
+  
+     
+      <div class="align">
+           
+
+
+          <div class="custom_select">
+           
+            <select id="filterjson" class=" Filter_data" onchange="dynamicDropdownList()">
+              <option value="">--select-- </option>
+              <option value="Name" name="Name" id="Name">Name</option>
+              <option value="Age" name="age">Age </option>
+  
+              <option value="Gender" name="Gender">Gender</option>
+              <option value="hobbie" name="hobbie">Hobbies</option>
+  
+              <option value="Nationality" id="nationality">Nationality </option>
+  
+          </div>
+  
+          <div class="search" id="search">
+  
+            <input type="search" name="Searchval" id="mySearch" class="searchTerm" placeholder="Search Here..." required>
+
+  
+  
+          </div>
+        
+          <select id="dropdown"  class="Filter_nationality" >
+            <option class="Filter_nationality_options" >-- Select Nationality --</option>
+          </select>
+        
+
+
+   
+  
+  
+      </div>
+      <input type="button" id="button"  onclick="search() " class="btn" value="Submit" hidden>
+      <input type="button" id="buttonnation"  onclick="searchnation() " class="btn" value="NationalitySearch" hidden>
+      
+  
+      <div id="all_table" class="card_wrapper">
+ 
+
+
+  
+    <label class="switch">
+  
+      
+    </div>
+  
+  
+  
+  
+  
+    </div>
+    </div>
+ 
+
+    <h2>Toggle Switch</h2>
+      <label class="switch">
+        <input type="checkbox" id="myCheckbox" onchange="toggleCheck()" checked>
+        <span class="slider round"></span>
+      </label>
+
+
+
+
+  </div>
+  
+ 
+
+
+
+
+
+  <!-- Card is created -->
+
+
+
+
+
+  </div>
+
+  <!-- CREATE A FORM AND SAVE DATA AT LOCAL STORAGE -->
+
+
+  <div>
+
+
+    <section>
+
+
+
+
+  </div>
+  </div>
+  </section>
+
+  </div>
+
+
+  <div id="all_cards" class="card_wrapper"></div>
+
+</body>
+<footer>
+
+
+  <script src="main.js"></script>
+  <script src="localStorage.js"></script>
+</footer>
+
+</html>
